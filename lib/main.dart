@@ -160,6 +160,9 @@ class _HomeState extends State<Home> {
   }
 }
 
+//TODO Make the classes collect text and image as variables
+//TODO Add the category top bar
+
 class MyCard extends StatefulWidget {
   const MyCard({Key? key}) : super(key: key);
 
