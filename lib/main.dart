@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
         title: const Text(
           "Listen",
           style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 22),
         ),
         actions: [
           IconButton(
