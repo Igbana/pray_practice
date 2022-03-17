@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black87,
+        backgroundColor: Colors.black,
         title: const Text(
           "Listen",
           style: TextStyle(
@@ -170,14 +170,35 @@ class MyCard extends StatefulWidget {
 class _MyCardState extends State<MyCard> {
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(10.0),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
       child: SizedBox(
         height: 150,
         width: 150,
         child: Card(
-          color: Colors.red,
-          //child: Image(image: , width: 20, height: 20,),
+          semanticContainer: true,
+          clipBehavior: Clip.antiAliasWithSaveLayer,
+          child: Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('images/img.jpg'),
+                fit: BoxFit.fill,
+              ),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.all(10),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                  child: Text(
+                    "Some Testing Text",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),)),
+            ),
+          ),
         ),
       ),
     );
