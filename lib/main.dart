@@ -160,6 +160,42 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
+              const Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Sleep Psalms again",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 1,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+
+                  ],
+                ),
+              ),
             ],
           ),
         ),
