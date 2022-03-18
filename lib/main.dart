@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pray/mycard.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -73,16 +74,18 @@ class _HomeState extends State<Home> {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children: const [
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
+                  children: [
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
                   ],
                 ),
               ),
@@ -106,16 +109,18 @@ class _HomeState extends State<Home> {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children: const [
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
+                  children: [
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
                   ],
                 ),
               ),
@@ -139,16 +144,19 @@ class _HomeState extends State<Home> {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children: const [
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
-                    MyCard(),
+                  children: [
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+                    MyCard(image: 'images/img.jpg', caption: 'Some testing text', onTap: () {},),
+
                   ],
                 ),
               ),
@@ -160,50 +168,4 @@ class _HomeState extends State<Home> {
   }
 }
 
-//TODO Make the classes collect text and image as variables
 //TODO Add the category top bar
-
-class MyCard extends StatefulWidget {
-  const MyCard({Key? key}) : super(key: key);
-
-  @override
-  State<MyCard> createState() => _MyCardState();
-}
-
-class _MyCardState extends State<MyCard> {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: SizedBox(
-        height: 150,
-        width: 150,
-        child: Card(
-          semanticContainer: true,
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          child: Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('images/img.jpg'),
-                fit: BoxFit.fill,
-              ),
-            ),
-            child: const Padding(
-              padding: EdgeInsets.all(10),
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                  child: Text(
-                    "Some Testing Text",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.white,
-                  ),)),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
